@@ -1,15 +1,79 @@
 <template>
   <header class="bg-black text-white relative">
-    <!-- Logo spanning both rows -->
-    <div class="absolute top-0 left-0 justify-end z-20">
+    <!-- Desktop Logo spanning both rows -->
+    <div class="hidden lg:block absolute top-0 left-0 justify-end z-20">
       <div class="logo-shape-full"></div>
       <div class="absolute top-2 left-[115px] text-white text-[6.8rem] flex items-center h-24 z-30">
         LOGO
       </div>
     </div>
     
-    <!-- Top Navigation Bar -->
-    <div class="relative bg-gradient-to-r from-[rgba(248,232,137,1)] to-[rgba(228,183,100,1)] px-4 py-3">
+    <!-- Mobile Header -->
+    <div class="lg:hidden bg-gradient-to-r from-[rgba(248,232,137,1)] to-[rgba(228,183,100,1)] px-4 py-3 flex items-center justify-between relative z-30">
+      <!-- Mobile Logo -->
+      <div class="flex items-center">
+        <div class="bg-black text-white px-6 py-2 rounded-full text-xl font-bold">
+          LOGO
+        </div>
+      </div>
+      
+      <!-- Sports Icons Container -->
+      <div class="flex items-center space-x-3 bg-black/80 rounded-full px-4 py-2">
+        <!-- Soccer Ball -->
+        <button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+          <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </button>
+        
+        <!-- Basketball -->
+        <button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+          <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            <path d="M12 6c-.55 0-1 .45-1 1v5.59l-2.29-2.3c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4 4c.39.39 1.02.39 1.41 0l4-4c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L13 12.59V7c0-.55-.45-1-1-1z"/>
+          </svg>
+        </button>
+        
+        <!-- Gaming Controller -->
+        <button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+          <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.97 16c.7 0 1.3-.3 1.8-.8l2.1-2.7c.2-.2.5-.2.7 0l2.1 2.7c.5.5 1.1.8 1.8.8h1.5c.8 0 1.5-.7 1.5-1.5v-9c0-.8-.7-1.5-1.5-1.5h-11c-.8 0-1.5.7-1.5 1.5v9c0 .8.7 1.5 1.5 1.5h1.5z"/>
+            <circle cx="8.5" cy="10.5" r="1"/>
+            <circle cx="15.5" cy="10.5" r="1"/>
+          </svg>
+        </button>
+        
+        <!-- Clock/Time -->
+        <button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+          <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Right Side Controls -->
+      <div class="flex items-center space-x-3">
+        <!-- Language Selector -->
+        <div class="bg-red-600 text-white px-3 py-1.5 rounded-full text-sm font-medium flex items-center space-x-1">
+          <div class="w-4 h-4 rounded-full bg-red-800 flex items-center justify-center">
+            <span class="text-xs font-bold text-yellow-400">⭐</span>
+          </div>
+          <span>Vn</span>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button @click="toggleMobileMenu" class="w-10 h-10 bg-black/80 rounded-full flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Desktop Top Navigation Bar -->
+    <div class="hidden lg:block relative bg-gradient-to-r from-[rgba(248,232,137,1)] to-[rgba(228,183,100,1)] px-4 py-3">
       <div class="header-container w-full min-w-[1024px] max-w-[1440px] mx-auto flex items-center justify-between px-6">
         <!-- Logo spacer -->
         <div class="w-48"></div>
@@ -554,8 +618,8 @@
       </div>
     </div>
     
-    <!-- Secondary Navigation -->
-    <div class="bg-black px-4 py-3">
+    <!-- Desktop Secondary Navigation -->
+    <div class="hidden lg:block bg-black px-4 py-3">
       <div class="header-container w-full min-w-[1024px] max-w-[1440px] mx-auto flex items-center px-6">
         <!-- Secondary navigation starts right after logo -->
         <nav class="hidden lg:flex items-center space-x-8 flex-1" style="margin-left: 325px;">
