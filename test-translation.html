@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation System Test</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div id="app" class="p-8">
+        <h2 class="text-3xl font-bold mb-6 text-center">Vietnamese/English Translation Test</h2>
+        
+        <!-- Language Selector -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h3 class="text-lg font-medium mb-4">Language Selector</h3>
+            <div class="flex justify-center">
+                <div class="relative language-dropdown">
+                    <button 
+                        @click="toggleLanguageDropdown"
+                        class="flex items-center space-x-2 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-sm hover:bg-red-700 transition-colors"
+                    >
+                        <div class="w-5 h-5 rounded-full overflow-hidden flex items-center justify-center bg-red-800">
+                            <span class="text-xs font-bold text-yellow-400">⭐</span>
+                        </div>
+                        <span class="text-sm font-semibold">{{ selectedLanguage }}</span>
+                        <svg class="w-4 h-4 ml-1 transition-transform duration-200" :class="{ 'rotate-180': showLanguageDropdown }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    
+                    <div 
+                        v-if="showLanguageDropdown" 
+                        class="absolute top-full mt-2 right-0 bg-white rounded-lg shadow-lg border overflow-hidden z-50 min-w-[160px]"
+                    >
+                        <button 
+                            @click="selectLanguage('TIẾNG VIỆT')"
+                            class="flex items-center space-x-3 w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors"
+                            :class="{ 'bg-red-50 text-red-600': selectedLanguage === 'TIẾNG VIỆT' }"
+                        >
+                            <div class="w-6 h-6 rounded-full overflow-hidden flex items-center justify-center bg-red-600">
+                                <span class="text-xs font-bold text-yellow-400">⭐</span>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">TIẾNG VIỆT</span>
+                        </button>
+                        
+                        <button 
+                            @click="selectLanguage('English')"
+                            class="flex items-center space-x-3 w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors"
+                            :class="{ 'bg-red-50 text-red-600': selectedLanguage === 'English' }"
+                        >
+                            <div class="w-6 h-6 rounded-full overflow-hidden flex items-center justify-center bg-blue-600">
+                                <span class="text-xs font-bold text-white">🇺🇸</span>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">English</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Translation Demo -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Main Navigation -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-medium mb-4">{{ t.mainMenu }}</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-calendar text-blue-500"></i>
+                        <span>{{ t.liveSchedule }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-list text-green-500"></i>
+                        <span>{{ t.matchSchedule }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-chart-line text-yellow-500"></i>
+                        <span>{{ t.odds }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-trophy text-purple-500"></i>
+                        <span>{{ t.results }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-comments text-red-500"></i>
+                        <span>{{ t.chat }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-newspaper text-gray-500"></i>
+                        <span>{{ t.news }}</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Secondary Navigation -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-medium mb-4">{{ t.categories }}</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-comment text-blue-500"></i>
+                        <span>{{ t.board }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-play-circle text-green-500"></i>
+                        <span>{{ t.reels }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-play text-yellow-500"></i>
+                        <span>{{ t.highlight }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-crown text-purple-500"></i>
+                        <span>{{ t.tipBet }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-film text-red-500"></i>
+                        <span>{{ t.movies }}</span>
+                    </li>
+                    <li class="flex items-center space-x-2 p-2 bg-gray-50 rounded">
+                        <i class="fas fa-book text-gray-500"></i>
+                        <span>{{ t.comics }}</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Auth Buttons -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-medium mb-4">{{ t.account }}</h3>
+                <div class="space-y-3">
+                    <button class="w-full px-4 py-2 bg-white border-2 border-gray-300 text-black rounded-full font-semibold hover:bg-gray-50 transition-colors">
+                        {{ t.register }}
+                    </button>
+                    <button class="w-full px-4 py-2 bg-gray-800 text-white rounded-full font-semibold hover:bg-gray-900 transition-colors">
+                        {{ t.login }}
+                    </button>
+                    <button class="w-full px-4 py-2 bg-red-600 text-white rounded-full font-semibold hover:bg-red-700 transition-colors">
+                        {{ t.logout }}
+                    </button>
+                </div>
+            </div>
+
+            <!-- Settings -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-medium mb-4">{{ t.settings }}</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between p-2 bg-gray-50 rounded">
+                        <span>{{ t.language }}</span>
+                        <span class="px-2 py-1 bg-red-600 text-white text-xs rounded">{{ selectedLanguage === 'TIẾNG VIỆT' ? 'VN' : 'EN' }}</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 bg-gray-50 rounded">
+                        <span>{{ t.darkMode }}</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" class="sr-only peer">
+                            <div class="w-8 h-4 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:left-[1px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demo Instructions -->
+        <div class="mt-8 bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-lg font-bold mb-2">How to Test:</h3>
+            <ol class="list-decimal list-inside space-y-1 text-gray-700">
+                <li>Click the red language button above to open the dropdown</li>
+                <li>Select "TIẾNG VIỆT" to see Vietnamese text</li>
+                <li>Select "English" to see English translations</li>
+                <li>Notice how all text throughout the interface changes automatically</li>
+                <li>The language preference is maintained across all sections</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const { createApp, ref, computed, onMounted, onUnmounted } = Vue;
+        
+        createApp({
+            setup() {
+                const showLanguageDropdown = ref(false);
+                const selectedLanguage = ref('TIẾNG VIỆT');
+                
+                // Translations object
+                const translations = {
+                    'TIẾNG VIỆT': {
+                        // Main Navigation
+                        liveSchedule: 'LỊCH TRỰC TIẾP',
+                        matchSchedule: 'LỊCH THI ĐẤU',
+                        odds: 'TỶ LỆ KÈO',
+                        results: 'KẾT QUA',
+                        chat: 'PHÒNG CHAT',
+                        news: 'TIN TỨC',
+                        
+                        // Secondary Navigation
+                        board: 'Bảng Tin',
+                        reels: 'Reels',
+                        highlight: 'Highlight',
+                        tipBet: 'Tip Kèo',
+                        movies: 'Phim Ảnh',
+                        comics: 'Truyện Tranh',
+                        
+                        // Auth
+                        register: 'ĐĂNG KÝ',
+                        login: 'ĐĂNG NHẬP',
+                        logout: 'Đăng Xuất',
+                        
+                        // Mobile Menu
+                        mainMenu: 'Menu Chính',
+                        categories: 'Danh Mục',
+                        settings: 'Cài Đặt',
+                        account: 'Tài Khoản',
+                        language: 'Ngôn Ngữ',
+                        darkMode: 'Chế Độ Tối'
+                    },
+                    'English': {
+                        // Main Navigation
+                        liveSchedule: 'LIVE SCHEDULE',
+                        matchSchedule: 'FIXTURES',
+                        odds: 'ODDS',
+                        results: 'RESULTS',
+                        chat: 'CHAT ROOM',
+                        news: 'NEWS',
+                        
+                        // Secondary Navigation
+                        board: 'News Board',
+                        reels: 'Reels',
+                        highlight: 'Highlight',
+                        tipBet: 'Betting Tips',
+                        movies: 'Movies',
+                        comics: 'Comics',
+                        
+                        // Auth
+                        register: 'REGISTER',
+                        login: 'LOGIN',
+                        logout: 'Logout',
+                        
+                        // Mobile Menu
+                        mainMenu: 'Main Menu',
+                        categories: 'Categories',
+                        settings: 'Settings',
+                        account: 'Account',
+                        language: 'Language',
+                        darkMode: 'Dark Mode'
+                    }
+                };
+                
+                // Computed property for current translations
+                const t = computed(() => translations[selectedLanguage.value]);
+                
+                const toggleLanguageDropdown = () => {
+                    showLanguageDropdown.value = !showLanguageDropdown.value;
+                };
+                
+                const selectLanguage = (language) => {
+                    selectedLanguage.value = language;
+                    showLanguageDropdown.value = false;
+                    console.log('Language changed to:', language);
+                };
+                
+                // Close dropdown when clicking outside
+                const handleClickOutside = (event) => {
+                    const target = event.target;
+                    if (!target.closest('.language-dropdown')) {
+                        showLanguageDropdown.value = false;
+                    }
+                };
+                
+                onMounted(() => {
+                    document.addEventListener('click', handleClickOutside);
+                });
+                
+                onUnmounted(() => {
+                    document.removeEventListener('click', handleClickOutside);
+                });
+                
+                return {
+                    showLanguageDropdown,
+                    selectedLanguage,
+                    t,
+                    toggleLanguageDropdown,
+                    selectLanguage
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

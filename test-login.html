@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login State Test</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <div class="bg-black text-white p-4">
+            <h2 class="text-xl mb-4">Login State Test</h2>
+            
+            <!-- Not Logged In State -->
+            <div v-if="!isLoggedIn" class="flex items-center space-x-3 mb-4">
+                <button @click="login" class="px-5 py-2 bg-white text-black rounded-full text-sm font-semibold hover:bg-gray-50 transition-colors">
+                    ĐĂNG KÝ
+                </button>
+                <button @click="login" class="px-5 py-2 bg-gray-800 text-white rounded-full text-sm font-semibold hover:bg-gray-900 transition-colors">
+                    ĐĂNG NHẬP
+                </button>
+            </div>
+            
+            <!-- Logged In State -->
+            <div v-else class="flex items-center space-x-3 mb-4">
+                <!-- Balance/Coins -->
+                <div class="flex items-center space-x-2 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold">
+                    <div class="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center">
+                        <span class="text-xs text-white font-bold">🪙</span>
+                    </div>
+                    <span class="font-bold">1000</span>
+                    <button class="ml-1 w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center">
+                        <span class="text-xs text-gray-600">+</span>
+                    </button>
+                </div>
+                
+                <!-- Notifications -->
+                <div class="flex items-center space-x-2">
+                    <!-- Bell Icon -->
+                    <div class="relative">
+                        <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center cursor-pointer">
+                            <i class="fas fa-bell text-white text-sm"></i>
+                        </div>
+                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></div>
+                    </div>
+                    
+                    <!-- Message Icon -->
+                    <div class="relative">
+                        <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center cursor-pointer">
+                            <i class="fas fa-envelope text-white text-sm"></i>
+                        </div>
+                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></div>
+                    </div>
+                    
+                    <!-- Settings Icon -->
+                    <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center cursor-pointer">
+                        <i class="fas fa-cog text-white text-sm"></i>
+                    </div>
+                </div>
+                
+                <!-- Profile Avatar -->
+                <div class="relative">
+                    <div @click="logout" class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                    <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+                </div>
+                
+                <button @click="logout" class="px-3 py-1 bg-red-600 text-white text-xs rounded-full hover:bg-red-700 transition-colors">
+                    Logout
+                </button>
+            </div>
+            
+            <p class="text-gray-400">Current state: {{ isLoggedIn ? 'Logged In' : 'Not Logged In' }}</p>
+        </div>
+    </div>
+
+    <script>
+        const { createApp, ref } = Vue;
+        
+        createApp({
+            setup() {
+                const isLoggedIn = ref(false);
+                
+                const login = () => {
+                    isLoggedIn.value = true;
+                    console.log('User logged in');
+                };
+                
+                const logout = () => {
+                    isLoggedIn.value = false;
+                    console.log('User logged out');
+                };
+                
+                return {
+                    isLoggedIn,
+                    login,
+                    logout
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
