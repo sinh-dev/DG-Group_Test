@@ -48,36 +48,27 @@
               @click="handleCardClick('basketball-1')"
             >
               <div class="relative h-36 md:h-44">
-                <!-- Modern Basketball Arena Background -->
-                <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900">
-                  <!-- Arena atmosphere overlay -->
-                  <div class="absolute inset-0 bg-black/60"></div>
+                <!-- Real Basketball Image Background -->
+                <div class="absolute inset-0">
+                  <img 
+                    src="/images/card/sports/basketball-players-basketball-match.avif" 
+                    alt="Basketball match"
+                    class="w-full h-full object-cover"
+                  />
+                  <!-- Dark overlay for better text readability -->
+                  <div class="absolute inset-0 bg-black/50"></div>
                   
-                  <!-- Stadium lights effect -->
-                  <div class="absolute top-0 left-1/4 w-32 h-16 bg-white/10 rounded-full blur-xl"></div>
-                  <div class="absolute top-0 right-1/4 w-24 h-12 bg-white/8 rounded-full blur-lg"></div>
+                  <!-- Enhanced lighting effects -->
+                  <div class="absolute top-0 left-1/4 w-32 h-16 bg-orange-400/20 rounded-full blur-xl"></div>
+                  <div class="absolute top-0 right-1/4 w-24 h-12 bg-amber-400/15 rounded-full blur-lg"></div>
                   
-                  <!-- Basketball court lines -->
-                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-orange-400/30"></div>
-                  <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-16 border-2 border-orange-400/40 rounded-full"></div>
-                  
-                  <!-- Basketball players silhouettes -->
-                  <div class="absolute inset-0 flex items-center justify-center space-x-4">
-                    <!-- Player 1 -->
-                    <div class="relative">
-                      <div class="w-12 h-16 md:w-14 md:h-20 bg-gradient-to-b from-orange-600/40 to-amber-700/60 rounded-full transform -rotate-12"></div>
-                      <div class="absolute -top-2 -right-1 w-6 h-6 bg-orange-500 rounded-full opacity-80"></div>
-                    </div>
-                    <!-- Player 2 -->
-                    <div class="relative">
-                      <div class="w-12 h-16 md:w-14 md:h-20 bg-gradient-to-b from-gray-400/40 to-gray-600/60 rounded-full transform rotate-12"></div>
-                    </div>
-                  </div>
-                  
-                  <!-- Basketball Icon -->
+                  <!-- Basketball Icon with real styling -->
                   <div class="absolute bottom-3 left-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
-                      <span class="text-white text-xl">🏀</span>
+                    <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white/20">
+                      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 6c-.55 0-1 .45-1 1v5.59l-2.29-2.3c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4 4c.39.39 1.02.39 1.41 0l4-4c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L13 12.59V7c0-.55-.45-1-1-1z"/>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -108,36 +99,28 @@
               @click="handleCardClick('gaming-1')"
             >
               <div class="relative h-36 md:h-44">
-                <!-- Modern Gaming Arena Background -->
-                <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-                  <!-- Gaming atmosphere overlay -->
-                  <div class="absolute inset-0 bg-black/60"></div>
+                <!-- Real Gaming/eSports Image Background -->
+                <div class="absolute inset-0">
+                  <img 
+                    src="/images/card/sports/starcraft-2-tournaments-esports.jpg" 
+                    alt="eSports tournament"
+                    class="w-full h-full object-cover"
+                  />
+                  <!-- Dark overlay for better text readability -->
+                  <div class="absolute inset-0 bg-black/50"></div>
                   
-                  <!-- Screen glow effects -->
-                  <div class="absolute top-0 left-1/4 w-32 h-16 bg-purple-400/10 rounded-full blur-xl"></div>
-                  <div class="absolute top-0 right-1/4 w-24 h-12 bg-pink-400/8 rounded-full blur-lg"></div>
+                  <!-- Enhanced gaming effects -->
+                  <div class="absolute top-0 left-1/4 w-32 h-16 bg-purple-400/20 rounded-full blur-xl"></div>
+                  <div class="absolute top-0 right-1/4 w-24 h-12 bg-blue-400/15 rounded-full blur-lg"></div>
                   
-                  <!-- Gaming setup elements -->
-                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-purple-400/30"></div>
-                  <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-16 border-2 border-purple-400/40 rounded-lg"></div>
-                  
-                  <!-- Gaming players silhouettes -->
-                  <div class="absolute inset-0 flex items-center justify-center space-x-4">
-                    <!-- Player 1 -->
-                    <div class="relative">
-                      <div class="w-12 h-16 md:w-14 md:h-20 bg-gradient-to-b from-purple-600/40 to-indigo-700/60 rounded-full transform -rotate-8"></div>
-                      <div class="absolute -top-2 -right-1 w-6 h-6 bg-purple-500 rounded-full opacity-80"></div>
-                    </div>
-                    <!-- Player 2 -->
-                    <div class="relative">
-                      <div class="w-12 h-16 md:w-14 md:h-20 bg-gradient-to-b from-pink-500/40 to-purple-700/60 rounded-full transform rotate-8"></div>
-                    </div>
-                  </div>
-                  
-                  <!-- Gaming Icon -->
+                  <!-- Gaming Icon with controller SVG -->
                   <div class="absolute bottom-3 left-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                      <span class="text-white text-xl">🎮</span>
+                    <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white/20">
+                      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.97 16c.7 0 1.3-.3 1.8-.8l2.1-2.7c.2-.2.5-.2.7 0l2.1 2.7c.5.5 1.1.8 1.8.8h1.5c.8 0 1.5-.7 1.5-1.5v-9c0-.8-.7-1.5-1.5-1.5h-11c-.8 0-1.5.7-1.5 1.5v9c0 .8.7 1.5 1.5 1.5h1.5z"/>
+                        <circle cx="8.5" cy="10.5" r="1"/>
+                        <circle cx="15.5" cy="10.5" r="1"/>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -192,11 +175,15 @@
                     <!-- Match Date/Time -->
                     <div class="text-xs mb-3 text-gray-200 font-medium">NGOÀI HẠNG ANH | 23.09.2023 | 20:30</div>
                     
-                    <!-- Teams -->
+                    <!-- Teams with Real Logos -->
                     <div class="flex items-center space-x-4">
                       <div class="text-center">
-                        <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full mb-1 flex items-center justify-center shadow-lg">
-                          <span class="text-black font-bold text-sm md:text-base">T</span>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full mb-1 flex items-center justify-center shadow-lg p-1">
+                          <img 
+                            src="/images/card/logo/Macarthur_FC.webp" 
+                            alt="Team A"
+                            class="w-full h-full object-contain rounded-full"
+                          />
                         </div>
                         <div class="text-xs font-medium">TEAM A</div>
                       </div>
@@ -204,18 +191,25 @@
                       <div class="text-lg md:text-xl font-bold bg-white/10 px-3 py-1 rounded-lg">VS</div>
                       
                       <div class="text-center">
-                        <div class="w-10 h-10 md:w-12 md:h-12 bg-red-600 rounded-full mb-1 flex items-center justify-center shadow-lg">
-                          <span class="text-white font-bold text-sm md:text-base">T</span>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full mb-1 flex items-center justify-center shadow-lg p-1">
+                          <img 
+                            src="/images/card/logo/phnom-penh-crown-fc.png" 
+                            alt="Team B"
+                            class="w-full h-full object-contain rounded-full"
+                          />
                         </div>
                         <div class="text-xs font-medium">TEAM B</div>
                       </div>
                     </div>
                   </div>
                   
-                  <!-- Soccer Ball -->
+                  <!-- Soccer Ball Icon -->
                   <div class="absolute bottom-3 left-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
-                      <span class="text-white text-xl">⚽</span>
+                    <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white/20">
+                      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -249,36 +243,27 @@
               @click="handleCardClick('basketball-2')"
             >
               <div class="relative h-36 md:h-44">
-                <!-- Modern Basketball Arena Background -->
-                <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900">
-                  <!-- Arena atmosphere overlay -->
-                  <div class="absolute inset-0 bg-black/60"></div>
+                <!-- Real Basketball Image Background -->
+                <div class="absolute inset-0">
+                  <img 
+                    src="/images/card/sports/basketball-players-basketball-match.avif" 
+                    alt="Basketball match"
+                    class="w-full h-full object-cover"
+                  />
+                  <!-- Dark overlay for better text readability -->
+                  <div class="absolute inset-0 bg-black/50"></div>
                   
-                  <!-- Stadium lights effect -->
-                  <div class="absolute top-0 left-1/3 w-28 h-14 bg-white/8 rounded-full blur-xl"></div>
-                  <div class="absolute top-0 right-1/3 w-20 h-10 bg-white/6 rounded-full blur-lg"></div>
+                  <!-- Enhanced lighting effects -->
+                  <div class="absolute top-0 left-1/3 w-28 h-14 bg-orange-400/20 rounded-full blur-xl"></div>
+                  <div class="absolute top-0 right-1/3 w-20 h-10 bg-amber-400/15 rounded-full blur-lg"></div>
                   
-                  <!-- Basketball court lines -->
-                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-orange-400/30"></div>
-                  <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-16 border-2 border-orange-400/40 rounded-full"></div>
-                  
-                  <!-- Basketball players silhouettes -->
-                  <div class="absolute inset-0 flex items-center justify-center space-x-3">
-                    <!-- Player 1 -->
-                    <div class="relative">
-                      <div class="w-11 h-15 md:w-13 md:h-19 bg-gradient-to-b from-amber-600/40 to-orange-700/60 rounded-full transform rotate-8"></div>
-                      <div class="absolute -top-1 -left-1 w-5 h-5 bg-orange-500 rounded-full opacity-70"></div>
-                    </div>
-                    <!-- Player 2 -->
-                    <div class="relative">
-                      <div class="w-11 h-15 md:w-13 md:h-19 bg-gradient-to-b from-blue-400/30 to-gray-600/50 rounded-full transform -rotate-8"></div>
-                    </div>
-                  </div>
-                  
-                  <!-- Basketball Icon -->
+                  <!-- Basketball Icon with real styling -->
                   <div class="absolute bottom-3 left-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
-                      <span class="text-white text-xl">🏀</span>
+                    <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white/20">
+                      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 6c-.55 0-1 .45-1 1v5.59l-2.29-2.3c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4 4c.39.39 1.02.39 1.41 0l4-4c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L13 12.59V7c0-.55-.45-1-1-1z"/>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -312,36 +297,28 @@
               @click="handleCardClick('gaming-2')"
             >
               <div class="relative h-36 md:h-44">
-                <!-- Modern Gaming Arena Background -->
-                <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-                  <!-- Gaming atmosphere overlay -->
-                  <div class="absolute inset-0 bg-black/60"></div>
+                <!-- Real Gaming/eSports Image Background -->
+                <div class="absolute inset-0">
+                  <img 
+                    src="/images/card/sports/starcraft-2-tournaments-esports.jpg" 
+                    alt="eSports tournament"
+                    class="w-full h-full object-cover"
+                  />
+                  <!-- Dark overlay for better text readability -->
+                  <div class="absolute inset-0 bg-black/50"></div>
                   
-                  <!-- Screen glow effects -->
-                  <div class="absolute top-0 left-1/3 w-28 h-14 bg-purple-400/8 rounded-full blur-xl"></div>
-                  <div class="absolute top-0 right-1/3 w-20 h-10 bg-pink-400/6 rounded-full blur-lg"></div>
+                  <!-- Enhanced gaming effects -->
+                  <div class="absolute top-0 left-1/3 w-28 h-14 bg-purple-400/20 rounded-full blur-xl"></div>
+                  <div class="absolute top-0 right-1/3 w-20 h-10 bg-blue-400/15 rounded-full blur-lg"></div>
                   
-                  <!-- Gaming setup elements -->
-                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-purple-400/30"></div>
-                  <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-16 border-2 border-purple-400/40 rounded-lg"></div>
-                  
-                  <!-- Gaming players silhouettes -->
-                  <div class="absolute inset-0 flex items-center justify-center space-x-3">
-                    <!-- Player 1 -->
-                    <div class="relative">
-                      <div class="w-11 h-15 md:w-13 md:h-19 bg-gradient-to-b from-indigo-600/40 to-purple-700/60 rounded-full transform rotate-10"></div>
-                      <div class="absolute -top-1 -left-1 w-5 h-5 bg-purple-500 rounded-full opacity-70"></div>
-                    </div>
-                    <!-- Player 2 -->
-                    <div class="relative">
-                      <div class="w-11 h-15 md:w-13 md:h-19 bg-gradient-to-b from-pink-500/30 to-indigo-700/50 rounded-full transform -rotate-10"></div>
-                    </div>
-                  </div>
-                  
-                  <!-- Gaming Icon -->
+                  <!-- Gaming Icon with controller SVG -->
                   <div class="absolute bottom-3 left-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                      <span class="text-white text-xl">🎮</span>
+                    <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white/20">
+                      <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.97 16c.7 0 1.3-.3 1.8-.8l2.1-2.7c.2-.2.5-.2.7 0l2.1 2.7c.5.5 1.1.8 1.8.8h1.5c.8 0 1.5-.7 1.5-1.5v-9c0-.8-.7-1.5-1.5-1.5h-11c-.8 0-1.5.7-1.5 1.5v9c0 .8.7 1.5 1.5 1.5h1.5z"/>
+                        <circle cx="8.5" cy="10.5" r="1"/>
+                        <circle cx="15.5" cy="10.5" r="1"/>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -405,33 +382,38 @@
               @click="handleCardClick(`grid-row1-${index}`)"
             >
               <div class="relative h-28 sm:h-32 md:h-36">
-                <div :class="getModernCardBackground(index)" class="absolute inset-0 w-full h-full">
-                  <div class="absolute inset-0 bg-black/60"></div>
+                <!-- Real Sport Image Background -->
+                <div class="absolute inset-0">
+                  <img 
+                    :src="getSportImage(index)" 
+                    :alt="`Sport ${index + 1}`"
+                    class="w-full h-full object-cover"
+                  />
+                  <!-- Dark overlay for better text readability -->
+                  <div class="absolute inset-0 bg-black/50"></div>
                   
-                  <!-- Modern sport atmosphere effects -->
-                  <div class="absolute top-0 left-1/4 w-16 h-8 bg-white/8 rounded-full blur-lg"></div>
-                  <div class="absolute top-0 right-1/4 w-12 h-6 bg-white/6 rounded-full blur-md"></div>
+                  <!-- Enhanced lighting effects -->
+                  <div v-if="index % 2 === 0" class="absolute top-0 left-1/4 w-16 h-8 bg-orange-400/20 rounded-full blur-lg"></div>
+                  <div v-else class="absolute top-0 left-1/4 w-16 h-8 bg-purple-400/20 rounded-full blur-lg"></div>
+                  <div class="absolute top-0 right-1/4 w-12 h-6 bg-white/10 rounded-full blur-md"></div>
                   
-                  <!-- Sport field/court lines -->
-                  <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-white/20"></div>
-                  <div v-if="index !== 2" class="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-8 border border-white/30 rounded-full"></div>
-                  <div v-else class="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-8 border border-white/30 rounded-sm"></div>
-                  
-                  <!-- Modern player silhouettes -->
-                  <div class="absolute inset-0 flex items-center justify-center space-x-2">
-                    <div class="relative">
-                      <div :class="getPlayerSilhouette(index, 0)" class="w-6 h-8 md:w-8 md:h-12 rounded-full transform -rotate-6"></div>
-                      <div v-if="index === 0" class="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full opacity-80"></div>
-                    </div>
-                    <div class="relative">
-                      <div :class="getPlayerSilhouette(index, 1)" class="w-6 h-8 md:w-8 md:h-12 rounded-full transform rotate-6"></div>
-                    </div>
-                  </div>
-                  
-                  <!-- Modern sport icon -->
+                  <!-- Modern sport icon with SVG -->
                   <div class="absolute bottom-2 left-2">
-                    <div :class="getModernIconBg(index)" class="w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center shadow-lg">
-                      <span class="text-white text-sm md:text-lg">{{ getSportIcon(index) }}</span>
+                    <div :class="getModernIconBg(index)" class="w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center shadow-lg border-2 border-white/20">
+                      <!-- Basketball Icon -->
+                      <svg v-if="index % 5 === 0" class="w-4 h-4 md:w-5 md:h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                      </svg>
+                      <!-- Gaming Controller Icon -->
+                      <svg v-else-if="index % 5 === 1" class="w-4 h-4 md:w-5 md:h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.97 16c.7 0 1.3-.3 1.8-.8l2.1-2.7c.2-.2.5-.2.7 0l2.1 2.7c.5.5 1.1.8 1.8.8h1.5c.8 0 1.5-.7 1.5-1.5v-9c0-.8-.7-1.5-1.5-1.5h-11c-.8 0-1.5.7-1.5 1.5v9c0 .8.7 1.5 1.5 1.5h1.5z"/>
+                        <circle cx="8.5" cy="10.5" r="1"/>
+                        <circle cx="15.5" cy="10.5" r="1"/>
+                      </svg>
+                      <!-- Default Sport Icon -->
+                      <svg v-else class="w-4 h-4 md:w-5 md:h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10"/>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -646,6 +628,54 @@ const getSportIconBg = (index: number) => {
 const getSportIcon = (index: number) => {
   const icons = ['🏀', '🎮', '⚽', '🏐', '🎾']
   return icons[index % icons.length]
+}
+
+// Get real sport images for grid cards
+const getSportImage = (index: number) => {
+  const images = [
+    '/images/card/sports/basketball-players-basketball-match.avif', // Basketball
+    '/images/card/sports/starcraft-2-tournaments-esports.jpg',      // Gaming
+    '/images/card/sports/basketball-players-basketball-match.avif', // Soccer (using basketball as fallback)
+    '/images/card/sports/basketball-players-basketball-match.avif', // Volleyball (using basketball as fallback)
+    '/images/card/sports/starcraft-2-tournaments-esports.jpg'       // Tennis (using gaming as fallback)
+  ]
+  return images[index % images.length]
+}
+
+// Get SVG icons for different sports
+const getSportIconSvg = (index: number) => {
+  const sportType = index % 5
+  switch (sportType) {
+    case 0: // Basketball
+      return `<svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+        <path d="M12 6c-.55 0-1 .45-1 1v5.59l-2.29-2.3c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4 4c.39.39 1.02.39 1.41 0l4-4c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L13 12.59V7c0-.55-.45-1-1-1z"/>
+      </svg>`
+    case 1: // Gaming
+      return `<svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7.97 16c.7 0 1.3-.3 1.8-.8l2.1-2.7c.2-.2.5-.2.7 0l2.1 2.7c.5.5 1.1.8 1.8.8h1.5c.8 0 1.5-.7 1.5-1.5v-9c0-.8-.7-1.5-1.5-1.5h-11c-.8 0-1.5.7-1.5 1.5v9c0 .8.7 1.5 1.5 1.5h1.5z"/>
+        <circle cx="8.5" cy="10.5" r="1"/>
+        <circle cx="15.5" cy="10.5" r="1"/>
+      </svg>`
+    case 2: // Soccer
+      return `<svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+      </svg>`
+    case 3: // Volleyball
+      return `<svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"/>
+      </svg>`
+    case 4: // Tennis
+      return `<svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+        <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+      </svg>`
+    default:
+      return getSportIcon(index)
+  }
 }
 
 // Modern card backgrounds with darker, more atmospheric gradients
